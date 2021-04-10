@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Diabetes Predictor</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+		
+	</head>
+
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class=''><span class="">Diabetes Predictor</span></h2>
+            <div class=''>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class=''>Oops! You have DIABETES.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='diabetes.webp') }}" alt="Diabetes Image">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class=''>Great! You DON'T have diabetes.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='no-diabetes.webp') }}" alt="Not Diabetes Image">
+			{% else %}
+				<h1>afsa</h1>
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="t"><i class="fab fa-github fa-lg contact-icon">aa</i></a>
+               <a target="_blank" href=""><i class="fab fa-linkedin fa-lg contact-icon">ss</i></a>
+           </div>
+           <p class=''>Made by Nilupul Manodya.</p>
+       </div>
+
+	</body>
+</html>

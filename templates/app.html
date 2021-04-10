@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Diabetes Predictor</title>
+		<link rel="stylesheet"  type= "text/css" href= "{{ url_for('static',filename='app.css') }}">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	</head>
+	<body>
+		<dev class="container">
+			<dev class="header">
+				<h1>Diabetes Pre Predictor</h1>
+			</dev><br>
+			<dev class="frm">
+				<form action="{{ url_for('predict')}}"method="post">
+					<input class="form-input" type="text" name="pregnancies" placeholder="Number of Pregnancies eg. 0 for male"><br>
+					<input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80"><br>
+					<input class="form-input" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80"><br>
+					<input class="form-input" type="text" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20"><br>
+					<input class="form-input" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80"><br>
+					<input class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+					<input class="form-input" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52"><br>
+					<input class="form-input" type="text" name="age" placeholder="Age (years) eg. 34"><br>
+			<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+		</form>
+			</dev>
+			<div class='footer'>
+				<div class="contact">
+					<a target="_blank" href="t"><i class="fab fa-github fa-lg contact-icon">a</i></a>
+					<a target="_blank" href=""><i class="fab fa-linkedin fa-lg contact-icon">ss</i></a>
+				</div>
+				<p class=''>Made by Nilupul Manodya.</p>
+			</div>
+		</dev>
+	
+	</body>
+</html>
