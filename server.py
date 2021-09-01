@@ -37,6 +37,3 @@ def predict():
         
         return render_template('results.html', prediction=my_prediction)
 
-if __name__ == "__main__":
-    print("Starting python flask server for diadiasfhoiafiosahfioas")
-    app.run(debug=True)
